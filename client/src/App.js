@@ -1,23 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import{useState} from "react"
 function App() {
+
+  const [equipo,setEquipo]= useState ("");
+  const [frecuencia,setFrecuencia]= useState ("");
+  const [planeado,setPlaneado]= useState ("");
+  const [ejecutado,setEjecutado]= useState ("");
+  const [observaciones,setObservaciones]= useState ("");
+  
+  const mostrarDatos = ()=>{
+    alert (equipo);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="datos">
+      <label>Equipo de Computo: <input
+      onChange={(event)=>{
+        setEquipo(event.target.value);
+      }}
+       type="text"/></label>
+       
+      <label>Frecuencia: <input
+      onChange={(event)=>{
+        setFrecuencia(event.target.value);
+      }}
+       type="text"/></label>
+
+      <label>Planeado: <input
+      onChange={(event)=>{
+        setPlaneado(event.target.value);
+      }}
+       type="text"/></label>
+
+      <label>Ejecutado: <input
+      onChange={(event)=>{
+        setEjecutado(event.target.value);
+      }}
+       type="text"/></label>
+
+      <label>Observaciones: <input
+      onChange={(event)=>{
+        setObservaciones(event.target.value);
+      }}
+       type="text"/></label>
+
+      <button onClick={mostrarDatos}>Registrar</button>
+    </div>
     </div>
   );
 }
