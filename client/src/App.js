@@ -1,55 +1,23 @@
+import logo from './logo.svg';
 import './App.css';
-import {useState} from "react"
 
 function App() {
-
-  const [nombre,setAuditorio] = useState ("");
-  const [nombrecompleto,setNombreCompleto] = useState ("");
-  const [fecha,setFecha] = useState ("");
-  const [hora,setHora] = useState ("");
-  const [nombredelaactividad,setnombreactividad] = useState ("");
-
-  
-  const mostrarDatos = ()=>{
-    alert(nombre);
-  }
-
-
   return (
     <div className="App">
-      .<div className= "datos">
-
-        <label>Tipo de Auditorio: <input 
-        onChange={(event)=>{
-          setAuditorio(event.target.value);
-        }}
-        type="text"/></label>
-
-        <label>Nombre Completo: <input
-        onChange= {(event)=>{
-          setNombreCompleto(event.target.value);
-        }}
-        type="text"/></label>
-
-        <label>Fecha de la actividad: <input 
-        onChange ={(event)=>{
-          setFecha(event.target.value);
-        }} type="date"/></label>
-
-        <label>Hora: <input 
-        onChange = {(event)=>{
-        setHora(event.target.value);
-        }}
-        type="time"/></label>
-
-        <label>Nombre de la actividad: <input 
-        onChange = {(event)=>{
-        setnombreactividad(event.target.value);
-        }}
-        type="time"/></label>
-
-        <button on onClick={mostrarDatos}>Registrar</button>
-      </div>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
