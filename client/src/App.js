@@ -9,7 +9,7 @@ function App() {
   const [observaciones, setObservaciones] = useState("");
 
   const add = () => {
-    axios.post("http://localhost:3001/create", { // Cambiar a 3001
+    axios.post("http://localhost:3001/create", {
       equipo: equipo,
       frecuencia: frecuencia,
       estado: estado,
