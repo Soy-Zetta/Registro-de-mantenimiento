@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from "react";
 import axios from "axios";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [equipo, setEquipo] = useState("");
@@ -78,7 +79,7 @@ function App() {
           />
         </label>
 
-        <button onClick={add}>Registrar</button>
+        <button className = 'btn btn-success' onClick={add}>Registrar</button>
       </div>
 
       <div className='lista'>
