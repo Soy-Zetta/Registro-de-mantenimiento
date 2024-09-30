@@ -42,6 +42,18 @@ app.post("/create", (req, res) => {
   );
 });
 
+app.get("/mantenimiento", (req, res) => {
+  db.query('SELECT * FROM mantenimiento', (err, result) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Error al obtener mantenimientos');
+      return;
+    }
+    res.send(result); // Enviar los resultados como respuesta
+  });
+});
+
+
 // Iniciar el servidor
 app.listen(3001, () => {
   console.log('Servidor corriendo en http://localhost:3001');
