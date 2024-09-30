@@ -135,7 +135,7 @@ function App() {
         </div>
       </div>
 
-      <table class="table table-striped">
+      <table className="table table-striped">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -146,19 +146,17 @@ function App() {
           </tr>
         </thead>
         <tbody>
-
-{
-              mantenimientoList.map((val,key)=>{
-                return <tr>
-                <th scope="row">{val.id}</th>
+          {mantenimientoList.map((val, key) => {
+            return (
+              <tr key={val.id}>
+                <th>{val.id}</th>
                 <td>{val.equipo}</td>
                 <td>{val.frecuencia}</td>
                 <td>{val.estado}</td>
                 <td>{val.observaciones}</td>
               </tr>
-              })
-              }
-
+            );
+          })}
         </tbody>
       </table>
     </div>
